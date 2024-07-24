@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+#main {
+    height: 110svh;
+    width: 100%;
+    background-color: #050812;
+}
+
+#main #navigator {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#slider {
+    position: relative;
+    margin-right: auto;
+    height: 600px;
+    width: auto;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+#slider>#listIcon {
+    height: 57px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+}
+#listIcon p {
+    width: 70%;
+    font-weight: 600;
+    text-align: center;
+    color: #BDFFF3;
+}
+#sliderData {
+    height: 82.5%;
+    width: 195px;
+    margin-top: 5px;
+    background-color: #19203D;
+    border-radius: 8px;
+    border-right: 1px solid rgb(0, 0, 0, 0.1);
+    position: absolute;
+    left: -195px;
+    top: 9.5%;
+    transition: all 0.3s ease-in-out;
+}
+#sliderData.active {
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+#sliderData p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 8% 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+#sliderData > p > a {
+    text-decoration: none;
+    color: white;
+}
+#container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #050812;
+}
+#container > h3{
+    height: 7%;
+    width: 80%;
+    align-self: auto;
+    color: white;
+    margin-right: 1%;
+}
+#createTeam,
+#create{
+    border: none;
+    outline: none;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75%;
+    width: 80%;
+    border-radius: 7px;
+    margin: 1%;
+    background-color: #19203D;
+}
+#create {
+    align-self: center;
+    padding: 8px 15px;
+    background-color: #1B93FF;
+    color: white;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+#teamNameAndPeople {
+    height: 80%;
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px 0 15px 30px;
+    color: white;
+}
+label{
+    font-weight: 500;
+}
+
+#add {
+    padding-right: 10px;
+}
+
+#list {
+    cursor: pointer;
+}
+#peopleContainer{
+    width: 60%;
+    margin-top: 10px;
+}
+#peopleNameScroll{
+    border: 1px solid white;
+    border-radius: 5px;
+    min-height: 35px;
+    max-height: 100px;
+    min-width: 50%;
+    margin: 3px 0;
+}
+.selected-item {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #0A0D1C;
+    font-size: 15px;
+}
+
+.selected-item button {
+    border: none;
+    padding: 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* username dropdown */
+.item-list{
+    scroll-behavior: smooth;
+    max-height: 100px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.item-list li:active{
+    background-color: #cddaea;
+}
+
+/* Input styling */
+.wrap-input-1 .input:focus {
+    outline: none;
+}
+
+.wrap-input-1 {
+    width: 60%;
+    margin: 10px 0 15px 0;
+    position: relative;
+}
+
+.wrap-input-1 .input {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-family: "Open Sans";
+    /* background-color:
+        #f5f6fd; */
+}
+
+.wrap-input-1 .input~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:#6c5dd3;
+    transition: 0.4s;
+}
+
+.wrap-input-1 .input:focus~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+}

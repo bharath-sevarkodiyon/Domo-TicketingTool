@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+
+#main #navigator {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#slider {
+    position: relative;
+    margin-right: auto;
+    height: 550px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+#slider>#listIcon {
+    height: 57px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#listIcon p {
+    width: 70%;
+    font-weight: 500;
+    text-align: center;
+    background: #b92b27;
+    background: -webkit-linear-gradient(to left, #1565C0, #b92b27);
+    background: linear-gradient(to left, #1565C0, #b92b27);
+    color: transparent;
+    background-clip: text;
+}
+
+#sliderData {
+    height: 70%;
+    width: 92%;
+    margin-top: 5px;
+    padding: 6px 0 0 6px;
+    background-color: #7D2CE0;
+    border-radius: 8px;
+    border-right: 1px solid rgb(0, 0, 0, 0.1);
+    position: absolute;
+    left: -250px;
+    top: 9.5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#sliderData.active {
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#sliderData h4 {
+    font-size: 19px;
+    text-align: center;
+    padding: 2%;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+#sliderData p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 8% 0%;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#sliderData>p>a {
+    text-decoration: none;
+    color: white;
+}
+
+/* To display top right corner First Letter of user*/
+#userLoginLogo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userLoginLogo>p {
+    font-weight: 500;
+}
+
+b {
+    margin-left: 10px;
+    padding: 4px 10px;
+    background-color: #cddaea;
+    color: #0f3158;
+    cursor: none;
+    border-radius: 50%;
+}
+
+#container {
+    height: 92%;
+    width: 100%;
+    padding-right: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#container>h3 {
+    width: 80%;
+    align-self: auto;
+    padding: 0 0 12px 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+#createTeam {
+    align-self: flex-end;
+    color: black;
+    padding: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #F3F3F3;
+}
+
+#createTeam>i {
+    padding-right: 7px;
+}
+
+table {
+    width: 90%;
+    height: 80%;
+    align-self: center;
+    /* justify-content: center; */
+    background-color: #F6F6F6;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 20px 0 20px 20px;
+}  
+td{
+    padding: 5px 0;
+    /* border: 2px solid; */
+}
+
+#showTeam{
+    height: 72px;
+    width: 35%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    scroll-behavior: smooth;
+}
+
+button{
+    margin-top: 2%;
+    border:none; outline: none;
+    align-self: center;
+    padding: 8px 15px;
+    background-color: #1B93FF;
+    color: white;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input{
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 5px;
+    outline: none;
+}
+textarea{
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 5px;
+    outline: none;
+}
+
+li:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+ul li:active{
+    background-color: #F3F3F3;
+}

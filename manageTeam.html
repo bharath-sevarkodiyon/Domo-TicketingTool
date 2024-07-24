@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Team</title>
+    <link rel="stylesheet" href="manageTeam.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id='main'>
+        <nav id='navigator'>
+            <div id='slider'>
+                <div id='listIcon'>
+                    <i class="fas fa-list" id="list"></i>
+                    <p>Ticketing System</p>
+                </div>
+                <div id='sliderData'>
+                    <p><a href="./createTicket.html">Create Ticket</a></p>
+                    <p><a href="./manageTeam.html">Manage Team</a></p>
+                    <p><a href=""></a>Manage Ticket</p>
+                </div>
+            </div>
+        </nav>
+        <div id="container">
+            <h3>Manage Team</h3>
+            <div id="content">
+                <a href="./createTeam.html" id='createTeam'><i class="fas fa-plus"></i>Create Team</a>
+                <h3>Teams</h3>
+                <table id="teamList">
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <main id="app"></main>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/helpers.js"></script>
+    <script src="components/router.js"></script>
+    <script src="components/autocomplete.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/table.js"></script>
+    <script src="components/floatingactionbutton.js"></script>
+    <script src="https://unpkg.com/ryuu.js"></script>
+    <script src="https://unpkg.com/@domoinc/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+    <script src="manageTeam.js"></script>
+</body>
+</html>

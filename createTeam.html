@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" href="createTeam.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id='main'>
+        <nav id='navigator'>
+            <div id='slider'>
+                <div id='listIcon'>
+                    <i class="fas fa-list" id="list"></i>
+                    <p>Ticketing System</p>
+                </div>
+                <div id='sliderData'>
+                    <p><a href="./createTicket.html">Create Ticket</a></p>
+                    <p><a href="./manageTeam.html">Manage Team</a></p>
+                    <p><a href="">Manage Ticket</a></p>
+                </div>
+            </div>
+        </nav>
+        <div id='container'>
+            <h3>Create Team</h3>
+            <div id='content'>
+                <!-- <button id='createTeam'><i class="fas fa-plus"></i>Create Team</button> -->
+                <!-- <table id="teamNameAndPeople">
+                    <tr>
+                        <td>
+                            <label>Team name:</label>
+                        </td>
+                        <td>
+                            <div class="wrap-input-1">
+                                <input class="input" type="text" placeholder="Name">
+                                <span class="focus-border"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>People/Member:</label>
+                        </td>
+                        <td>
+                            <div id="peopleContainer">
+                                <div id="peopleNameScroll"></div>
+                                <ul class="item-list">
+                                
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table> -->
+                <div id="teamNameAndPeople">
+                    <div>
+                        <label>Team name:</label>
+                        <div class="wrap-input-1">
+                            <input id="teamNameInp" class="input" type="text" placeholder="Enter a new team name">
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label>People/Member:</label>
+                        <div id="peopleContainer">
+                            <div id="peopleNameScroll"></div>
+                            <ul class="item-list">
+                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a id='create'>Create</a>
+            </div>
+        </div>
+    </div>
+    <main id="app"></main>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/helpers.js"></script>
+    <script src="components/router.js"></script>
+    <script src="components/autocomplete.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/table.js"></script>
+    <script src="components/floatingactionbutton.js"></script>
+    <script src="https://unpkg.com/ryuu.js"></script>
+    <script src="https://unpkg.com/@domoinc/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Ticket</title>
+    <link rel="stylesheet" href="./createTicket.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id='main'>
+        <nav id='navigator'>
+            <div id='slider'>
+                <div id='listIcon'>
+                    <i class="fas fa-list" id="list"></i>
+                    <p>Ticketing System</p>
+                </div>
+                <div id='sliderData'>
+                    <h4 id="fullName"></h4>
+                    <p><a href="./createTicket.html"></a>Create Ticket</p>
+                    <p><a href="./manageTeam.html">Manage Team</a></p>
+                    <p><a href=""></a>Manage Ticket</p>
+                </div>
+            </div>
+            <div id='userLoginLogo'>
+            </div>
+        </nav>
+        <div id="container">
+            <h3>Create Ticket</h3>
+            <div id="content">
+                <table id="teamList">
+                    <tr>
+                        <td>Team:</td>
+                        <td>
+                            <div id="showTeam"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ticket Name:</td>
+                        <td><input type="text" id="ticketName" placeholder="Ticket name"></td>
+                    </tr>
+                    <tr>
+                        <td>Ticket Details:</td>
+                        <td>
+                            <textarea placeholder="Explain in detail" name="ticketDetails" id="detail" rows="4" cols="50"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <button id="submit" type="submit">Submit</button>
+                <!-- <ul id="teamList" class="team-list"></ul> -->
+            </div>
+        </div>
+    </div>
+    <main id="app"></main>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/helpers.js"></script>
+    <script src="components/router.js"></script>
+    <script src="components/autocomplete.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/table.js"></script>
+    <script src="components/floatingactionbutton.js"></script>
+    <script src="https://unpkg.com/ryuu.js"></script>
+    <script src="https://unpkg.com/@domoinc/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+    <script src="createTicket.js"></script>
+</body>
+</html>

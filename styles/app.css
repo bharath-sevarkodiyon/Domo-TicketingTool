@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+#main {
+  height: 100vh;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+
+#main #navigator {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#slider {
+  position: relative;
+  margin-right: auto;
+  height: 600px;
+  width: auto;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+#slider>#listIcon {
+  height: 57px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  /* border: 2px solid; */
+}
+
+#listIcon p {
+  width: 70%;
+  font-weight: 500;
+  text-align: center;
+  /* border: 2px solid brown; */
+  background: #b92b27;
+  background: -webkit-linear-gradient(to left, #1565C0, #b92b27);
+  background: linear-gradient(to left, #1565C0, #b92b27);
+  color: transparent;
+  background-clip: text;
+}
+
+#sliderData {
+  height: 80%;
+  margin-top: 5px;
+  padding: 6px 0 0 6px;
+  background-color: #7D2CE0;
+  border-radius: 8px;
+  border-right: 1px solid rgb(0, 0, 0, 0.1);
+  position: absolute;
+  left: -230px;
+  top: 9.5%;
+  transition: all 0.3s ease-in-out;
+}
+
+#sliderData.active {
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+#sliderData h4 {
+  font-size: 19px;
+  text-align: center;
+  padding: 2%;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+#sliderData p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 8% 0%;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#sliderData > p > a{
+  text-decoration: none;
+  color: white;
+}
+/* To display top right corner First Letter of user*/
+#userLoginLogo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#userLoginLogo > p{
+  font-weight: 500;
+}
+b{
+  margin-left: 10px;
+  padding: 4px 10px;
+  background-color: #cddaea;
+  color: #0f3158;
+  cursor: none;
+  border-radius: 50%;
+}
+#container {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  padding: 50px;
+  justify-content: flex-end;
+}
+
+#createTeam,
+#create,
+input {
+  border: none;
+  outline: none;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  border-radius: 7px;
+  background-color: white;
+}
+
+#createTeam {
+  align-self: flex-end;
+  margin-right: 10%;
+  padding: 8px 13px;
+  align-items: end;
+  font-weight: 600;
+  border-radius: 7px;
+  background-color: #F3F3F3;
+  cursor: pointer;
+}
+#createteam > i{
+  padding-right: 10px;
+}
+
+#create {
+  align-self: center;
+  padding: 8px 15px;
+  background-color: #1B93FF;
+  color: white;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#create.active {
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+#teamNameAndPeople {
+  width: 80%;
+  height: 50%;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 10px;
+  border: 2px solid green;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+}
+#teamNameAndPeople.active{
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+
+}
+#teamNameInp {
+  height: 30px;
+  width: 90%;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+
+#add {
+  padding-right: 10px;
+}
+
+#list {
+  cursor: pointer;
+}
+
+input {
+  scrollbar-width: 50px;
+  scroll-behavior: smooth;
+}
