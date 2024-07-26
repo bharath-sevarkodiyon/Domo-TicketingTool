@@ -12,6 +12,35 @@
       "fields": []
     }
   ],
+  "workflowMapping": [
+    {
+      "alias": "sendEmail",
+      "modelId": null,
+      "version": null,
+      "parameters": [
+        {
+          "name": "to",
+          "aliasedName": "to",
+          "type": "person",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "subject",
+          "aliasedName": "subject",
+          "type": "text",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "body",
+          "aliasedName": "body",
+          "type": "text",
+          "list": false,
+          "children": []
+        }
+      ]
+    }],
   "collections":[{
     "name":"ticketingApp",
     "schema": {

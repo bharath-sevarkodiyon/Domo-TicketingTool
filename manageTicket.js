@@ -1,7 +1,3 @@
-const userLoginLogo = document.getElementById("userLoginLogo");
-const list = document.getElementById("list");
-const fullName = document.getElementById("fullName");
-
 document.addEventListener("DOMContentLoaded", () => {
   // It will reload the page
   if (!sessionStorage.getItem('reloaded')) {
@@ -9,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     location.reload();
   }
 })
+
 
 list.addEventListener("click", () => {
   document.getElementById("sliderData").classList.toggle("active")
@@ -25,35 +22,39 @@ function fetchTeams() {
 function displayTeams(teams) {
   const body = document.querySelector("#teamList #body");
   console.log(teams);
-  teams.forEach(team => {
-      if(team.content.hasOwnProperty('teamName'))
+  teams.forEach(element => {
+      if(element.content.hasOwnProperty('team'))
       {  
-        const teamName = team.content.teamName;
-        const members = team.content.selectedNames.join(", ");
+        const teams = element.content.team;
+        const ticketName = element.content.ticketName;
+        const ticketDetail = element.content.ticketDetail;
         // let sno = 1;
         const row = document.createElement("tr");
         // const slno = document.getElementById("td");
         const teamNameCell = document.createElement("td");
-        const membersCell = document.createElement("td");
+        const ticketNameCell = document.createElement("td");
+        const ticketDetailCell = document.createElement("td");
+
         const editTd = document.createElement("td")
         const deleteTd = document.createElement("td");
 
         const editBtn = document.createElement("a");
         const deleteBtn = document.createElement("a");
         // slno.textContent = sno;
-        teamNameCell.textContent = teamName;
-        membersCell.textContent = members;
+        teamNameCell.textContent = teams;
+        ticketNameCell.textContent = ticketName;
+        ticketDetailCell.textContent = ticketDetail;
 
         const editIcon = document.createElement('i');
         editIcon.className = 'fas fa-edit';
         editIcon.addEventListener("click",()=>{
-          window.location.href = `createTeam.html?id=${team.id}`;
+          window.location.href = `createTicket.html?id=${element.id}`;
         })
 
         const deleteIcon = document.createElement('i');
         deleteIcon.className = 'fas fa-trash';
         deleteIcon.addEventListener("click",()=>{
-          domo.delete(`/domo/datastores/v1/collections/ticketingApp/documents/${team.id}`);
+          domo.delete(`/domo/datastores/v1/collections/ticketingApp/documents/${element.id}`);
           alert("Team Deleted")
           location.reload();
         })
@@ -65,7 +66,9 @@ function displayTeams(teams) {
         deleteTd.appendChild(deleteBtn);
         // row.appendChild(slno);
         row.appendChild(teamNameCell);
-        row.appendChild(membersCell);
+        row.appendChild(ticketNameCell);
+        row.appendChild(ticketDetailCell);
+
         row.appendChild(editTd);
         row.appendChild(deleteTd);
 

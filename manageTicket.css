@@ -38,7 +38,8 @@
     font-size: 18px;
     color: white;
 }
-#listIcon i{
+
+#listIcon i {
     cursor: pointer;
 }
 
@@ -72,94 +73,88 @@
     font-weight: 400;
     text-align: center;
     width: 100%;
-    padding: 8% 0%;
+    padding: 8% 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
-#sliderData > p > a {
+#sliderData>p>a {
     text-decoration: none;
     color: white;
 }
 
-#container{
+#container {
     height: 90%;
     width: 100%;
+    /* padding-right: 35px; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-end;
     background-color: #050812;
 }
+
 #container>h3 {
-    height: 7%;
     width: 80%;
     align-self: auto;
     color: white;
-    /* margin-right: 1%; */
-    /* padding: 0 0 12px 0; */
+    margin-right: 1%;
 }
 
-#content{
+#content {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     align-items: center;
-    height: 90%;
+    height: 85%;
     width: 80%;
+    background-color: #19203D;
     border-radius: 7px;
     margin: 1%;
-    background-color: #19203D;
 }
-#content > h3{
+#content>h3 {
     color: white;
 }
 
-#createTeam{
-    align-self: flex-end;
-    color: black;
-    padding: 7px;
-    border-radius: 5px;
-    text-decoration: none;
-    background-color: #0A0D1C;
-    color: white;
-    margin: 1%;
-}
-#createTeam > i{
-    padding-right: 7px;
-}
-/* Created Table to display details*/
-#teamList{
+#teamList {
+    border: 2px solid;
     margin-top: 20px;
     width: 75%;
-    height: auto;
+    /* height: auto; */
     border: 1px solid white;
     padding: 10px;
     border-collapse: collapse;
 }
-#teamList thead tr th{
+
+#teamList thead tr th {
     color: white;
     border: 1px solid white;
     padding: 7px;
 }
-th:first-child{
+
+th:first-child {
     width: 30%;
 }
-#body{
+
+#body {
     text-align: center;
 }
-#body td{
+
+#body td {
     border: 1px solid white;
 }
-td{
+
+td {
     color: #FFFFF7;
     padding: 5px;
 }
-td:first-child{
+
+td:first-child {
     width: 30%;
 }
+
 /* edit and delete button while displaying teams */
-a{
+a {
     padding: 4px;
     cursor: pointer;
     color: white;
