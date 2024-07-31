@@ -45,7 +45,7 @@
     width: 70%;
     font-weight: 600;
     text-align: center;
-    color: #BDFFF3;
+    color: #cddaea;
 }
 
 #sliderData {
@@ -166,11 +166,56 @@ li:hover{
     background-color: #81838B;
     cursor: pointer;
 }
-li.active{
+/* li.active{
     background-color: #81838B;
     cursor: pointer;
-}
+} */
 .team-list::-webkit-scrollbar {
     width: 12px;
     /* Width of the scrollbar */
+}
+
+.load {
+    display: none;
+    position: absolute;
+    left: 59%;
+    top: 93.5%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+}
+
+.loading {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40.5%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+}
+
+#error {
+    display: none;
+    top: 18%;
+    text-align: center;
+    position: absolute;
+    width: 28%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #19203D;
+}
+
+#emptyField {
+    display: none;
+    top: 22.5%;
+    left: 42.5%;
+    text-align: center;
+    position: absolute;
+    width: 28%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #19203D;
 }

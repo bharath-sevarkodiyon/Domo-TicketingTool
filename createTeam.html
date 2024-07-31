@@ -19,27 +19,41 @@
             </div>
         </nav>
         <div id='container'>
-            <h3>Create Team</h3>
+            <h3 id="title">Create Team</h3>
             <div id='content'>
                 <div id="teamNameAndPeople">
                     <div>
-                        <label>Team name:</label>
+                        <label>Team Name:</label>
                         <div class="wrap-input-1">
-                            <input id="teamNameInp" class="input" type="text" placeholder="Enter a new team name">
+                            <input id="teamNameInp" class="input" type="text" placeholder="Enter a new Team Name" required>
                             <span class="focus-border"></span>
                         </div>
                     </div>
                     <div>
                         <label>People/Member:</label>
                         <div id="peopleContainer">
-                            <div id="peopleNameScroll"></div>
+                            <div id="loading" class="loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                            <div id="peopleNameScroll">
+                            </div>
+                            <input type="text" class="searchField" placeholder="Search names...">
                             <ul class="item-list">
-                    
+                                
                             </ul>
                         </div>
                     </div>
+                    <div id="error">
+                        <p>Team name is already present</p>
+                    </div>
+                    <div id="emptyField">
+                        <P>One or more fields are empty</P>
+                    </div>
                 </div>
                 <a id='create'>Create</a>
+                <div id="load" class="load">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
             </div>
         </div>
     </div>

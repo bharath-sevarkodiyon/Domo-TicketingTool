@@ -26,13 +26,17 @@
             </div>
         </nav>
         <div id="container">
-            <h3>Create Ticket</h3>
+            <h3 id="title">Create Ticket</h3>
             <div id="content">
                 <table id="teamList">
                     <tr>
                         <td>Team:</td>
                         <td>
-                            <div id="showTeam"></div>
+                            <div id="showTeam">
+                                <div id="loading" class="loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -46,7 +50,16 @@
                         </td>
                     </tr>
                 </table>
+                <div id="error">
+                    <p>Team name is already present</p>
+                </div>
+                <div id="emptyField">
+                    <P>One or more fields are empty</P>
+                </div>
                 <button id="submit" type="submit">Submit</button>
+                <div id="load" class="load">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
                 <!-- <ul id="teamList" class="team-list"></ul> -->
             </div>
         </div>

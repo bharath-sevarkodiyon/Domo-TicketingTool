@@ -46,7 +46,7 @@
     width: 70%;
     font-weight: 600;
     text-align: center;
-    color: #BDFFF3;
+    color: #cddaea;
 }
 
 #sliderData {
@@ -128,6 +128,7 @@
 #createTeam > i{
     padding-right: 7px;
 }
+
 /* Created Table to display details*/
 #teamList{
     margin-top: 20px;
@@ -142,9 +143,9 @@
     border: 1px solid white;
     padding: 7px;
 }
-th:first-child{
+/* th:first-child{
     width: 30%;
-}
+} */
 #body{
     text-align: center;
 }
@@ -155,12 +156,65 @@ td{
     color: #FFFFF7;
     padding: 5px;
 }
-td:first-child{
-    width: 30%;
+td:nth-child(1){
+    width: 27%;
 }
+
 /* edit and delete button while displaying teams */
 a{
     padding: 4px;
     cursor: pointer;
+    color: white;
+}
+
+/* Loading icon */
+.loading {
+    display: none;
+    position: absolute;
+    left: 60%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: white;
+}
+
+/* Delete Popup */
+.conDiv{
+    width: 33%;
+    height: 13%;
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    position: absolute;
+    top: 20.4%;
+    display: none;
+}
+.btnDiv{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+.yesOrNo{
+    padding: 4px 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.yesOrNo:nth-child(2){
+    color: white;
+    background-color: #E0504E;
+}
+.load {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
     color: white;
 }

@@ -40,22 +40,39 @@
           "children": []
         }
       ]
-    }],
-  "collections":[{
-    "name":"ticketingApp",
-    "schema": {
-      "columns": [
-        {"name": "teamName", "type":"STRING"},
-        {"name": "selectedNames", "type":"STRING"},
-        {"name": "team", "type": "STRING"},
-        {"name": "ticketName", "type": "STRING"},
-        {"name": "ticketDetail", "type": "STRING"}
-      ]
-    },
-    "syncEnabled": true
+    }
+  ],
+  "collections": [
+    {
+      "name": "ticketingApp",
+      "schema": {
+        "columns": [
+          {
+            "name": "teamName",
+            "type": "STRING"
+          },
+          {
+            "name": "selectedNames",
+            "type": "STRING"
+          },
+          {
+            "name": "team",
+            "type": "STRING"
+          },
+          {
+            "name": "ticketName",
+            "type": "STRING"
+          },
+          {
+            "name": "ticketDetail",
+            "type": "STRING"
+          }
+        ]
+      },
+      "syncEnabled": true
     }
   ],
   "fileName": "manifest.json",
-  "id": "6037400b-cdf0-4216-8a30-ab0d6cdd86bb",
+  "id": "7104d6b5-71f7-4114-b773-f3f8b28a273d",
   "proxyId": "d2cb4d87-807f-4512-b382-8a6d5d027595"
 }

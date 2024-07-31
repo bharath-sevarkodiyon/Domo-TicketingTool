@@ -1,79 +1,123 @@
-const userLoginLogo = document.getElementById("userLoginLogo");
+const loadingElement = document.getElementById('loading');
+const showLoading = () => {
+  loadingElement.style.display = 'block';
+};
+const hideLoading = () => {
+  loadingElement.style.display = 'none';
+};
+
+const loadElement = document.getElementById('load');
+const showLoad = () => {
+  loadElement.style.display = 'block';
+};
+const hideLoad = () => {
+  loadElement.style.display = 'none';
+};
+
 const list = document.getElementById("list");
-const fullName = document.getElementById("fullName");
-
-document.addEventListener("DOMContentLoaded", () => {
-  // It will reload the page
-  if (!sessionStorage.getItem('reloaded')) {
-    sessionStorage.setItem('reloaded', 'true');
-    location.reload();
-  }
-})
-
 list.addEventListener("click", () => {
   document.getElementById("sliderData").classList.toggle("active")
 })
-
+showLoading()
 function fetchTeams() {
   domo.get(`/domo/datastores/v1/collections/ticketingApp/documents/`)
     .then(response => {
-          console.log(response);
-          displayTeams(response);
+      console.log(response);
+      displayTeams(response);
+      hideLoading()
     })
 }
-
+fetchTeams();
 function displayTeams(teams) {
+  const head = document.querySelector('#teamList #head');
+  const headTr = document.createElement("tr");
+
+  const teamNameHead = document.createElement("th");
+  const membersCellHead = document.createElement("th");
+
+  teamNameHead.textContent = "Team Name";
+  membersCellHead.textContent = "People";
+
+  headTr.appendChild(teamNameHead)
+  headTr.appendChild(membersCellHead)
+
+  head.appendChild(headTr)
+
   const body = document.querySelector("#teamList #body");
   console.log(teams);
   teams.forEach(team => {
-      if(team.content.hasOwnProperty('teamName'))
-      {  
-        const teamName = team.content.teamName;
-        const members = team.content.selectedNames.join(", ");
-        // let sno = 1;
-        const row = document.createElement("tr");
-        // const slno = document.getElementById("td");
-        const teamNameCell = document.createElement("td");
-        const membersCell = document.createElement("td");
-        const editTd = document.createElement("td")
-        const deleteTd = document.createElement("td");
+    if (team.content.hasOwnProperty('teamName')) {    // validating the teamName from AppDB
+      const teamName = team.content.teamName;
+      const members = team.content.selectedNames.join(", ");
 
-        const editBtn = document.createElement("a");
-        const deleteBtn = document.createElement("a");
-        // slno.textContent = sno;
-        teamNameCell.textContent = teamName;
-        membersCell.textContent = members;
+      const row = document.createElement("tr");
 
-        const editIcon = document.createElement('i');
-        editIcon.className = 'fas fa-edit';
-        editIcon.addEventListener("click",()=>{
-          window.location.href = `createTeam.html?id=${team.id}`;
-        })
+      // Creating a table data to store the value
+      const teamNameCell = document.createElement("td");
+      const membersCell = document.createElement("td");
+      const editTd = document.createElement("td")
+      const deleteTd = document.createElement("td");
 
-        const deleteIcon = document.createElement('i');
-        deleteIcon.className = 'fas fa-trash';
-        deleteIcon.addEventListener("click",()=>{
-          domo.delete(`/domo/datastores/v1/collections/ticketingApp/documents/${team.id}`);
-          alert("Team Deleted")
-          location.reload();
-        })
+      // Creating Edit and Delete button
+      const editBtn = document.createElement("a");
+      const deleteBtn = document.createElement("a");
 
-        editBtn.appendChild(editIcon);
-        deleteBtn.appendChild(deleteIcon);
+      // Assigning the values
+      teamNameCell.textContent = teamName;
+      membersCell.textContent = members;
+
+      const editIcon = document.createElement('i');
+      editIcon.className = 'fas fa-edit';
+      editIcon.addEventListener("click", () => {
+        // It will navigate to the create team page with existing value
+        window.location.href = `createTeam.html?id=${team.id}`;
+      })
+
+      const deleteIcon = document.createElement('i');
+      deleteIcon.className = 'fas fa-trash';
+      deleteIcon.addEventListener("click", () => {
+        // Getting conformation before deleting the data
+        const conDiv = document.querySelector(".conDiv");
+        conDiv.style.display = "block";
+
+        const yes = document.getElementById("yes")
+        const no = document.getElementById("no")
+
+        const handleYes = ()=>{
+          showLoad()
+          domo.delete(`/domo/datastores/v1/collections/ticketingApp/documents/${team.id}`)
+          .then(()=>{
+            row.remove();
+            hideLoad()
+            conDiv.style.display = "none";
+            yes.removeEventListener("click", handleYesClick);
+            no.removeEventListener("click", handleNoClick);
+          })
+        }
+        const handleNo = ()=>{
+          conDiv.style.display = "none";
+          yes.removeEventListener("click", handleYesClick);
+          no.removeEventListener("click", handleNoClick);
+        }
         
-        editTd.appendChild(editBtn);
-        deleteTd.appendChild(deleteBtn);
-        // row.appendChild(slno);
-        row.appendChild(teamNameCell);
-        row.appendChild(membersCell);
-        row.appendChild(editTd);
-        row.appendChild(deleteTd);
+        yes.addEventListener("click", handleYes)
+        no.addEventListener("click", handleNo)
+      })
 
-        body.appendChild(row);
-      } else{
-        console.log("Error: In AppDB Null values are present");
-      }
-    });
+      editBtn.appendChild(editIcon);
+      deleteBtn.appendChild(deleteIcon);
+
+      editTd.appendChild(editBtn);
+      deleteTd.appendChild(deleteBtn);
+
+      row.appendChild(teamNameCell);
+      row.appendChild(membersCell);
+      row.appendChild(editTd);
+      row.appendChild(deleteTd);
+
+      body.appendChild(row);
+    } else {
+      console.log("Error: In AppDB Null values are present");
+    }
+  });
 }
-
-fetchTeams();

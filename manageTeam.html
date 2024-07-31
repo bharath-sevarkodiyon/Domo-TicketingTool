@@ -28,16 +28,28 @@
                 <a href="./createTeam.html" id='createTeam'><i class="fas fa-plus"></i>Create Team</a>
                 <!-- <h3>Teams</h3> -->
                 <table id="teamList">
-                    <thead>
-                        <tr>
-                            <th>Team Name</th>
-                            <th>People</th>
-                        </tr>
+                    <thead id="head">
+
                     </thead>
                     <tbody id="body">
 
                     </tbody>
                 </table>
+                <div id="loading" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <div class="conDiv">
+                    <p>Are you sure want to delete the record?</p>
+                    <div class="btnDiv">
+                        <button id="no" class="yesOrNo">Cancel</button>
+                        <button id="yes" class="yesOrNo">
+                            Delete
+                        </button>
+                        <div id="load" class="load">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
